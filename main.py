@@ -1,5 +1,8 @@
 import csv
-from methods import f
+from classes.stockLine import stockLine
+from functions.add import add
+
+testObj = stockLine("h", "s", "s", "t", "d", "sechs")
 
 
 print("1. ADD\n 2. DEL\n 3. IMPORT \n4. SEARCH \n5. PLOT \n 6. SAVE \n7. LOAD \n8. QUIT")
@@ -8,6 +11,7 @@ while(True):
     match option:
         case 1:
             print("add")
+            print(testObj)
         case 2:
             print("del")
         case 3:
@@ -24,10 +28,7 @@ while(True):
             print("QUIT")
         case _:
             print("invalid")
+            break
         
 
 
-
-
-
-print("hello world")
