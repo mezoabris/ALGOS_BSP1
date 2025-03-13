@@ -3,6 +3,7 @@ from classes.stockLine import stockLine
 from functions.add import add
 
 testObj = stockLine("h", "s", "s", "t", "d", "sechs")
+maxIndex = 101
 
 
 print("1. ADD\n 2. DEL\n 3. IMPORT \n4. SEARCH \n5. PLOT \n 6. SAVE \n7. LOAD \n8. QUIT")
