@@ -20,6 +20,7 @@ while(True):
         case 1:
             print("add")
             add(stockSymbols, stockNames)
+            
         case 2:
             print("del")
         case 3:
@@ -34,6 +35,7 @@ while(True):
             print("LOAD")
         case 8:
             print("QUIT")
+            break
         case _:
             print("invalid")
             break
