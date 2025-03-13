@@ -12,7 +12,7 @@ while(True):
     match option:
         case 1:
             print("add")
-            print(testObj)
+            print(testObj.high)
         case 2:
             print("del")
         case 3:
