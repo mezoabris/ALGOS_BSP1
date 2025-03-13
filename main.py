@@ -2,8 +2,15 @@ import csv
 from classes.stockLine import stockLine
 from functions.add import add
 
+stockLines = [0] * 30
+stockList = [0] * 101
+
+stockSymbols = [0] * 101
+stockNames = [0] * 101
+
+
 testObj = stockLine("h", "s", "s", "t", "d", "sechs")
-maxIndex = 101
+
 
 
 print("1. ADD\n 2. DEL\n 3. IMPORT \n4. SEARCH \n5. PLOT \n 6. SAVE \n7. LOAD \n8. QUIT")
@@ -12,7 +19,7 @@ while(True):
     match option:
         case 1:
             print("add")
-            print(testObj.high)
+            add(stockSymbols, stockNames)
         case 2:
             print("del")
         case 3:

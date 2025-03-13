@@ -6,3 +6,8 @@ class stockLine:
         self.open = open
         self.high = high
         self.low = low
+
+class stocks:
+      def __init__(self, symbol, stockName):
+        self.symbol = symbol
+        self.stocks = stockName

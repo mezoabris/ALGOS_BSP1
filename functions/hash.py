@@ -1,19 +1,13 @@
-def hash_function(word):
-    hash_value = 0
-    for i, letter in enumerate(word):
-        hash_value += ord(letter) * (i + 1)
-    return hash_value
-
-strings = ["apple", "tesla", "microsoft", "meta", "amazon", "google", "qualcomm", "cisco", "starbucs"]
-hashtable = [0] * 101
-
-for word in strings:
-    hash_value = hash_function(word)  # Use the better_hash function
-    position = hash_value % 101  # Get the position in the hashtable
-
-    if hashtable[position] == 0:
-        hashtable[position] = word
+def hash_function(word, list):
+    hash_index = 0
+    for i in word:
+        hash_index = hash_index + ord(i)
+    hash_index = hash_index % 101
+    print(hash_index)
+    if(list[hash_index] == 0):
+        print("value is inserted...")
     else:
-        print(word + " at position " + str(position) + " is already taken.")
+        print("Index is occupied value is shifted")
+        #Shift value with quadratic probing
 
-print(hashtable)
+
