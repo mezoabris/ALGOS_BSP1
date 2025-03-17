@@ -1,8 +1,10 @@
 import csv
 from classes.stockLine import stockLine
 from functions.add import add
-from functions.search import search
+from functions.search_wkn import search_wkn
 from functions.importstock import importstock
+from functions.hash import hash_function, shiftIndex
+from functions.search_stock import search_stock
 
 stockLines = [0] * 30
 stockList = [0] * 101
@@ -29,7 +31,14 @@ while(True):
             importstock(stockLines, stockList, stockSymbolList, stockNameList)
         case 4:
             search_input = input("enter name or symbol: ")
-            search(stockSymbolList, stockNameList, search_input)
+            wkn = search_wkn(stockSymbolList, stockNameList, search_input)
+            search_stock(wkn, stockList)
+
+        
+            
+                
+            
+
             print("SEARCH")
         case 5:
             print("PLOT")

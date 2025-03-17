@@ -1,6 +1,6 @@
 import csv
 from classes.stockLine import stockLine
-from functions.search import search
+from functions.search_wkn import search_wkn
 from functions.hash import hash_function, shiftIndex
 
 def importstock(stockLines, stockList, stockSymbolList, stockNameList):
@@ -22,13 +22,15 @@ def importstock(stockLines, stockList, stockSymbolList, stockNameList):
             else:
                 print("Too many lines")
     ########1:Search for wkn 2: Create hash from WKN 3: save list in stockLines in stockList########
-    wkn = search(stockSymbolList, stockNameList, stockNameOrSymbol)
+    wkn = search_wkn(stockSymbolList, stockNameList, stockNameOrSymbol)
     print(wkn)
     index_for_stockLines = hash_function(wkn)
     index_for_stockLines = shiftIndex(index_for_stockLines, stockList)
+    fullobject = [wkn, stockLines]
     if(index_for_stockLines != 102):
-        stockList[index_for_stockLines] = stockLines
-
+        stockList[index_for_stockLines] = fullobject
+        print(fullobject[1])
+    
                 
     
             
