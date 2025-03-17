@@ -1,6 +1,7 @@
 import csv
 from classes.stockLine import stockLine
 from functions.add import add
+from functions.search import search
 
 stockLines = [0] * 30
 stockList = [0] * 101
@@ -26,6 +27,7 @@ while(True):
         case 3:
             print("import")
         case 4:
+            search(stockSymbolList, stockNameList)
             print("SEARCH")
         case 5:
             print("PLOT")
