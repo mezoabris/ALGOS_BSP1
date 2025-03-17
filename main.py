@@ -20,6 +20,7 @@ while(True):
         case 1:
             print("add")
             add(stockSymbolList, stockNameList)
+            
         case 2:
             print("del")
         case 3:
