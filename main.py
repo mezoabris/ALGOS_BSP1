@@ -5,8 +5,8 @@ from functions.add import add
 stockLines = [0] * 30
 stockList = [0] * 101
 
-stockSymbols = [0] * 101
-stockNames = [0] * 101
+stockSymbolList = [0] * 101
+stockNameList = [0] * 101
 
 
 testObj = stockLine("h", "s", "s", "t", "d", "sechs")
@@ -19,8 +19,7 @@ while(True):
     match option:
         case 1:
             print("add")
-            add(stockSymbols, stockNames)
-            
+            add(stockSymbolList, stockNameList)
         case 2:
             print("del")
         case 3:
