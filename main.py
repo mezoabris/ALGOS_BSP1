@@ -5,6 +5,7 @@ from functions.search_wkn import search_wkn
 from functions.importstock import importstock
 from functions.hash import hash_function, shiftIndex
 from functions.search_stock import search_stock
+from functions.delete import deleteStock
 
 stockLines = [0] * 30
 stockList = [0] * 101
@@ -26,6 +27,8 @@ while(True):
             add(stockSymbolList, stockNameList)
         case 2:
             print("del")
+            deleteStock(stockNameList, stockSymbolList, stockList)
+
         case 3:
             print("import")
             importstock(stockLines, stockList, stockSymbolList, stockNameList)
@@ -33,12 +36,6 @@ while(True):
             search_input = input("enter name or symbol: ")
             wkn = search_wkn(stockSymbolList, stockNameList, search_input)
             search_stock(wkn, stockList)
-
-        
-            
-                
-            
-
             print("SEARCH")
         case 5:
             print("PLOT")
