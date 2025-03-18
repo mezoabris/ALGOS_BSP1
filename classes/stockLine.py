@@ -1,3 +1,6 @@
+import json
+from json import JSONEncoder
+
 class stockLine:
      def __init__(self, date, closeLast,volume, open, high, low):
         self.date = date
@@ -11,3 +14,7 @@ class stocks:
       def __init__(self, symbol, stockName):
         self.symbol = symbol
         self.stocks = stockName
+
+class EncodeList(JSONEncoder):
+      def default(self, o):
+          return o.__dict__
