@@ -10,6 +10,8 @@ def search_wkn(stockSymbolList, stockNameList, search_input):
     else:
         print("name recognized")
         search_index = compare(stockNameList, search_input, search_index)
+        print("ERROR here ---------------")
+        print(stockNameList[search_index][1])
         wkn = str(stockNameList[search_index][1])
     return wkn
 

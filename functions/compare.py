@@ -16,3 +16,4 @@ def compare(list, search_input, search_index):
             break
         j+=1
     print("stock not found")
+    return -1
