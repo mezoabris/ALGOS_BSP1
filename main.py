@@ -7,6 +7,7 @@ from functions.search_stock import search_stock
 from functions.save import save
 from functions.delete import deleteStock
 from functions.load import load
+from functions.plot import plotStock
 
 stockLines = [0] * 30
 stockList = [0] * 101
@@ -34,17 +35,23 @@ while(True):
             print("import")
             importstock(stockLines, stockList, stockSymbolList, stockNameList)
         case 4:
+            print("SEARCH")
             search_input = input("enter name or symbol: ")
             wkn = search_wkn(stockSymbolList, stockNameList, search_input)
-            search_stock(wkn, stockList)
-            print("SEARCH")
+            stock_index = search_stock(wkn, stockList)
+            linesOfStock = stockList[stock_index][1]
+            line = linesOfStock[0]
+            if isinstance(line, stockLine):
+                print(line.date + line.closeLast+line.volume+line.open + line.high + line.low)
         case 5:
             print("PLOT")
+            plotStock(stockSymbolList, stockNameList, stockList, search_input)
         case 6:
             save(stockList,stockSymbolList, stockNameList)
             print("SAVE")
         case 7:
             print("LOAD")
+            search_input = input("enter name or symbol: ")
             load(stockList, stockLines, stockNameList, stockSymbolList)
         case 8:
             print("QUIT")
