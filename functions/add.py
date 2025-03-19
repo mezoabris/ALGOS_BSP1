@@ -9,7 +9,7 @@ def add(stockSymbolList, stockNameList):
     #2; Name with WKN is saved in stockNameList
     name_index = hash_function(stockName)
     name_index = shiftIndex(name_index, stockNameList)
-    if(name_index != 102):
+    if(name_index != 1010):
         stockNameList[name_index] = stockWknName
         print(stockNameList)
 
@@ -17,7 +17,7 @@ def add(stockSymbolList, stockNameList):
     #2; Symbol with WKN is saved in StockSymbolsList
     symbol_index = hash_function(stockSymbol)
     symbol_index = shiftIndex(symbol_index, stockSymbolList)
-    if(symbol_index != 102):
+    if(symbol_index != 1010):
         stockSymbolList[symbol_index] = stockWknSymbol
         print(stockSymbolList)
 

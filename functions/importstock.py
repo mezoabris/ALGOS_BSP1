@@ -27,7 +27,7 @@ def importstock(stockLines, stockList, stockSymbolList, stockNameList):
     index_for_stockLines = hash_function(wkn)
     index_for_stockLines = shiftIndex(index_for_stockLines, stockList)
     fullobject = [wkn, stockLines]
-    if(index_for_stockLines != 102):
+    if(index_for_stockLines != 1010):
         stockList[index_for_stockLines] = fullobject
         print(stockList)
     

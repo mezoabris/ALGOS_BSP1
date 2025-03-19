@@ -10,10 +10,10 @@ from functions.load import load
 from functions.plot import plotStock
 
 stockLines = [0] * 30
-stockList = [0] * 101
+stockList = [0] * 1009
 
-stockSymbolList = [0] * 101
-stockNameList = [0] * 101
+stockSymbolList = [0] * 1009
+stockNameList = [0] * 1009
 
 
 testObj = stockLine("h", "s", "s", "t", "d", "sechs")
@@ -45,6 +45,7 @@ while(True):
                 print(line.date + line.closeLast+line.volume+line.open + line.high + line.low)
         case 5:
             print("PLOT")
+            search_input = input("enter name or symbol: ")
             plotStock(stockSymbolList, stockNameList, stockList, search_input)
         case 6:
             save(stockList,stockSymbolList, stockNameList)
