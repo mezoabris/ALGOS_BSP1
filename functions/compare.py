@@ -5,8 +5,6 @@ def compare(list, search_input, search_index):
         if(list[search_index] != 0 and list[search_index] != 1):
             if search_input == list[search_index][0]:
                 print("stock found")
-                wkn = str(list[search_index][0])
-                print(wkn)
                 return search_index
             else:
                 search_index = search_index + j*j
