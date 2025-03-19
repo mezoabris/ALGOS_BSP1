@@ -6,6 +6,7 @@ from functions.importstock import importstock
 from functions.search_stock import search_stock
 from functions.save import save
 from functions.delete import deleteStock
+from functions.load import load
 
 stockLines = [0] * 30
 stockList = [0] * 101
@@ -44,6 +45,7 @@ while(True):
             print("SAVE")
         case 7:
             print("LOAD")
+            load(stockList, stockLines, stockNameList, stockSymbolList)
         case 8:
             print("QUIT")
             break

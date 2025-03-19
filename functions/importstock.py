@@ -29,7 +29,7 @@ def importstock(stockLines, stockList, stockSymbolList, stockNameList):
     fullobject = [wkn, stockLines]
     if(index_for_stockLines != 102):
         stockList[index_for_stockLines] = fullobject
-        print(fullobject[1])
+        print(stockList)
     
                 
     
